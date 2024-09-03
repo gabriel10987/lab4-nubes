@@ -1,15 +1,21 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 9000;
 
 // Ruta principal
 app.get('/', (req, res) => {
   res.send('¡Hola, mundo!');
 });
 
-app.get('/about', (req, res) => {
-  res.send('Esta es la página acerca de.');
-});
+// Ruta para clientes
+app.get('/clientes', (req, res) => {
+    res.send('Aquí se mostrarán los clientes.');
+  });
+  
+  // Ruta para productos
+  app.get('/productos', (req, res) => {
+    res.send('Aquí se mostrarán los productos.');
+  });
 
 // Iniciar el servidor
 app.listen(port, () => {
